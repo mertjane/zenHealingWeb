@@ -41,7 +41,7 @@ const scaleInVariants: Variants = {
   }
 };
 
-const staggerContainerVariants: Variants = {
+/* const staggerContainerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -49,7 +49,7 @@ const staggerContainerVariants: Variants = {
       delayChildren: 0.1
     }
   }
-};
+}; */
 
 const staggerItemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
