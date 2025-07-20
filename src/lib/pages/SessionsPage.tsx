@@ -1,6 +1,6 @@
 const SessionsPage = () => {
   return (
-    <div className="min-h-screen md:h-[325vh] h-[220vh]">
+    <div className="min-h-screen md:h-[325vh] h-[255vh]">
       {/* Hero Section */}
       <div className="md:h-[500px] h-[400px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">Sessions</h1>
@@ -53,7 +53,7 @@ const SessionsPage = () => {
       {/* Content Section */}
       <div className="flex flex-col lg:flex-row md:px-28 py-28 bg-white gap-16">
         {/* Text Block */}
-        <div className="w-full lg:w-1/2 pt-10 lg:pt-40 md:pl-20 pl-6">
+        <div className="w-full md:order-1 order-2 lg:w-1/2 md:pt-10 pt-0 lg:pt-40 md:pl-20 pl-6">
           <p className="uppercase tracking-wider md:text-2xl text-xl font-thin text-[#5c6a55] mb-4">
             Where healing meets harmony
           </p>
@@ -71,7 +71,7 @@ const SessionsPage = () => {
         </div>
 
         {/* Image Stack */}
-        <div className="relative w-full lg:w-1/2 md:min-h-[700px] min-h-[400px]">
+        <div className="relative flex md:order-2 order-1 w-full lg:w-1/2 md:min-h-[700px] min-h-[400px]">
           <img
             src="/assets/images/bg_layout.jpg"
             className="object-cover md:h-[700px] md:w-[600px] h-[330px] w-[330px] absolute z-20 md:left-12 md:top-12 left-4 top-4"
