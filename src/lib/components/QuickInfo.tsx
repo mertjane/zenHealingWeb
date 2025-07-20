@@ -2,7 +2,7 @@ import { ScrollAnimation } from "./ScrollFadeIn";
 
 const QuickInfo = () => {
   return (
-    <div className="md:h-[110vh] h-[80vh] bg-[#eee6da]">
+    <div className="md:h-[110vh] h-[100vh] bg-[#eee6da]">
       <img
         src="/assets/images/logoOriginal.png"
         alt="Zen Reiki"
