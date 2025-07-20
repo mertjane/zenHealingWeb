@@ -1,6 +1,6 @@
 const Lotus = () => {
   return (
-    <div className="md:h-screen h-[110vh] relative flex items-center justify-center mb-20">
+    <div className="md:h-screen h-[120vh] relative flex items-center justify-center mb-20">
       <div className="inset-0 bg-black/40 z-50 absolute top-0 left-0 w-full h-full"></div>
       <img
         src="/assets/images/lotuswater.jpg"
