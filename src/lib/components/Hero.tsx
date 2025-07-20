@@ -26,7 +26,7 @@ const Hero = () => {
         <a
           href={ROUTES.BOOK_NOW}
           target="_blank"
-          className="cursor-pointer px-12 uppercase text-md tracking-wider border duration-300 py-4 border-white text-white hover:bg-white hover:text-black duration-300"
+          className="cursor-pointer px-12 uppercase text-md tracking-wider border duration-300 py-4 border-white text-white hover:bg-white hover:text-black "
         >
           Book now
         </a>

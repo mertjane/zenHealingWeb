@@ -2,7 +2,6 @@ import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
 
-
 const MobileHeader = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   
