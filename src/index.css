@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("/assets/fonts/BodoniModa_9pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  line-height: 1.5;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button,
+img,
+li,
+label {
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bodoni", serif;
+  user-select: none;
+}
+
+
+/* Hamburger Menu Styles */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  position: relative;
+  z-index: 1002;
+}
+
+.line {
+  fill: none;
+  stroke: #cdcdc2;
+  stroke-width: 4;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu.opened .line{
+  stroke: #5c6a55;
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 3;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 3;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 3;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 3;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 3;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 3;
+}
