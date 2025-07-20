@@ -1,6 +1,6 @@
 const AboutPage = () => {
   return (
-    <div className="md:h-[220vh] h-[175vh] ">
+    <div className="md:h-[220vh] h-[185vh] ">
       <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">About Us</h1>
         <p className="text-neutral-500 md:text-4xl text-xl md:w-3/4 w-full tracking-wider leading-tight font-thin pt-6">
