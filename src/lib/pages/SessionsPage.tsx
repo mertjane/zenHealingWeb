@@ -1,6 +1,6 @@
 const SessionsPage = () => {
   return (
-    <div className="min-h-screen md:h-[325vh] h-[255vh]">
+    <div className="min-h-screen md:h-[325vh] h-[275vh]">
       {/* Hero Section */}
       <div className="md:h-[500px] h-[400px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">Sessions</h1>
