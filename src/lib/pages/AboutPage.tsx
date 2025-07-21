@@ -9,7 +9,7 @@ const AboutPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="md:h-auto h-[320vh]">
+    <div className="md:h-auto h-[410vh]">
       <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
           About Us
@@ -25,12 +25,12 @@ const AboutPage = () => {
         <div className="relative px-6 py-12">
           <img
             src="/assets/images/bg_layout.jpg"
-            className="absolute z-20 h-[400px] w-[400px] object-cover left-6 top-12"
+            className="absolute z-20 h-[400px] w-[350px] object-cover left-4 top-12"
             alt="dot"
           />
           <img
             src="/assets/images/bio.jpg"
-            className="object-cover h-[400px] w-[400px] absolute z-30 left-14 top-20"
+            className="object-cover h-[400px] w-[350px] absolute z-30 left-10 top-20"
             alt="Reiki Master"
           />
           <div className="pt-[28em] p-10">
