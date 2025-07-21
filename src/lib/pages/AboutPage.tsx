@@ -9,7 +9,7 @@ const AboutPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="md:h-auto h-[420vh]">
+    <div className="md:h-auto h-[380vh]">
       <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
           About Us
