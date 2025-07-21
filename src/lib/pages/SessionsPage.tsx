@@ -29,7 +29,7 @@ const SessionsPage = () => {
           />
           <img
             src="/assets/images/studio4-edited.png"
-            className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[360px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[300px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
             alt="Reiki Studio"
           />
         </div>
@@ -110,7 +110,7 @@ const SessionsPage = () => {
           />
           <img
             src="/assets/images/zenreception.jpg"
-            className="object-fit md:h-[700px] md:w-[650px] h-[330px] w-[360px] absolute z-30 md:left-0 md:top-24 left-10 top-10 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[650px] h-[330px] w-[300px] absolute z-30 md:left-0 md:top-24 left-10 top-10 shadow-lg"
             alt="Reiki Studio"
           />
         </div>
