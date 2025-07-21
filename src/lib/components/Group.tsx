@@ -1,3 +1,5 @@
+import { ROUTES } from "../routes/routePaths";
+
 const Group = () => {
   return (
     <div className="md:h-screen h-[70vh] relative flex items-center justify-center">
@@ -19,10 +21,11 @@ const Group = () => {
           strength, peace, and gratitude that extend far beyond the energy.
         </p>
         <a
-          href="#"
+          href={ROUTES.BOOK_NOW}
+          target="_blank"
           className="uppercase border-b border-white text-white tracking-widest font-thin py-3 px-8 relative top-10 hover:bg-[#717d67] hover:text-amber-50 hover:border-[#717d67] duration-300"
         >
-          sign up today
+          book now
         </a>
       </div>
     </div>

@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content Section */}
       <div className="w-full text-center absolute bottom-10 z-[1001] pb-14">
         <span className="md:text-2xl text-xl tracking-widest uppercase font-light text-slate-300">
-          brighton's reiki Studio
+          brighton's reiki Clinic
         </span>
         <h1 className="md:text-8xl text-4xl text-amber-50 md:leading-28 leading-normal mt-8 pb-10">
           Where Tranquillity <br />

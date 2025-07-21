@@ -34,12 +34,14 @@ const MobileFooter = () => {
             <a
               className="text-amber-50 tracking-widest mx-auto text-center font-thin leading-normal text-md w-full px-8"
               href={ROUTES.INSTAGRAM}
+              target="_blank"
             >
               Instagram
             </a>
             <a
               className="text-amber-50 tracking-widest mx-auto text-center font-thin leading-normal text-md w-full px-8"
               href={ROUTES.FACEBOOK}
+              target="_blank"
             >
               Facebook
             </a>
@@ -48,7 +50,7 @@ const MobileFooter = () => {
             <small className="text-amber-50 tracking-widest font-thin">
               <a href="#">Terms & Conditions | </a>
               <a href="#">Privacy Policy | </a>
-              <a href="#">Studio Policy</a>
+              <a href="#">Clinic Policy</a>
             </small>
             <small className="text-amber-50 font-thin tracking-widest mt-8 w-3/4 mx-auto">
               © 2024 by Zen Healing Reiki. Website by DiploDev

@@ -31,7 +31,7 @@ const Footer = () => {
           <a href={ROUTES.INSTAGRAM} target="_blank" className="text-neutral-300 tracking-wide">
             Instagram
           </a>
-          <a href={ROUTES.FACEBOOK} className="text-neutral-300 tracking-wide">
+          <a href={ROUTES.FACEBOOK} target="_blank" className="text-neutral-300 tracking-wide">
             Facebook
           </a>
         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
         <small className="text-neutral-300 tracking-wide">
           <a href="#">Terms & Conditions | </a>
           <a href="#">Privacy Policy | </a>
-          <a href="#">Studio Policy</a>
+          <a href="#">Clinic Policy</a>
         </small>
         <small className="text-neutral-300 tracking-wide">
           © 2024 by Zen Healing Reiki. Website by DiploDev

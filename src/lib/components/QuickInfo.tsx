@@ -1,3 +1,4 @@
+import { ROUTES } from "../routes/routePaths";
 import { ScrollAnimation } from "./ScrollFadeIn";
 
 const QuickInfo = () => {
@@ -27,10 +28,11 @@ const QuickInfo = () => {
         >
           <p className="md:text-3xl text-xl md:max-w-4/6 w-full mx-auto pt-12 md:px-0 px-4 font-thin tracking-wider text-[#646362]">
             Discover a new realm of wellness and transformation at Zen Reiki,
-            Brighton's only Reiki studio. Nestled in the south-end of our city,
-            we invite you to embark on a journey of self-discovery and renewal,
+            Brighton's Reiki Clinic. Nestled in the south-end of our city, we
+            invite you to embark on a journey of self-discovery and renewal,
             where you can connect with the elements of nature in a luxurious and
-            serene environment.
+            serene environment.{" "}
+            <em className="font-medium">Don't miss booking your free 15-minute consultation.</em>
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -39,7 +41,8 @@ const QuickInfo = () => {
           margin="0px 0px -20px 0px"
         >
           <a
-            href="#"
+            href={ROUTES.BOOK_NOW}
+            target="_blank"
             className="uppercase border-b border-[#646362] text-[#646362] tracking-widest font-thin py-2 px-8 relative top-10 hover:bg-[#646362] hover:text-amber-50 duration-300"
           >
             explore sessions
