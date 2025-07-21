@@ -5,7 +5,7 @@ const AlbumSection = () => {
     <div className="py-20 min-h-screen flex flex-col ">
       {/* Image 1 */}
       <div className="flex md:flex-row flex-col">
-        <img
+        <img 
           className="md:w-2/4 md:h-screen w-full h-3/4 object-cover "
           src="/assets/images/reiki1.jpg"
           alt="Image 1"
@@ -13,7 +13,7 @@ const AlbumSection = () => {
 
         <div className="md:w-2/4 w-full md:pl-20 pl-0 md:text-start text-center  md:pt-40 pt-10">
           <ParallaxScroll offset={100}>
-            <StaggerAnimation staggerDelay={0.4} childDelay={0.6}>
+            <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
               <StaggerItem>
                 <h1 className="tracking-wider font-thin md:text-5xl text-4xl text-[#646362]">
                   <em>Recharge</em> Your Mind, <br /> Body & Spirit
@@ -36,7 +36,7 @@ const AlbumSection = () => {
       <div className="flex md:flex-row flex-col">
         <div className="flex md:order-1 order-2 md:w-2/4 w-full md:pl-20 pl-0 md:text-start text-center  md:pt-40 pt-10">
           <ParallaxScroll offset={100}>
-            <StaggerAnimation staggerDelay={0.4} childDelay={0.6}>
+            <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
               <StaggerItem>
                 <h1 className="tracking-wider font-thin md:text-5xl text-5xl text-[#646362]">
                   <em>Awaken</em> Your Inner Light
@@ -68,7 +68,7 @@ const AlbumSection = () => {
         />
         <div className="md:w-2/4 w-full md:pl-20 pl-0 md:text-start text-center  md:pt-40 pt-10">
           <ParallaxScroll offset={100}>
-            <StaggerAnimation staggerDelay={0.4} childDelay={0.6}>
+            <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
               <StaggerItem>
                 <h1 className="tracking-wider font-thin md:text-5xl text-5xl text-[#646362]">
                   <em>Find Stillness</em> in Every Breath
