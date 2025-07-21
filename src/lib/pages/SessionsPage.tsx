@@ -30,7 +30,7 @@ const SessionsPage = () => {
           <img
             src="/assets/images/studio4-edited.png"
             className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[340px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
-            alt="Reiki Studio"
+            alt="Reiki Clinic"
           />
         </div>
 
@@ -40,7 +40,7 @@ const SessionsPage = () => {
             <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
               <StaggerItem>
                 <p className="uppercase tracking-wider md:text-2xl text-xl font-thin text-[#5c6a55] mb-4">
-                  A great studio full of calmness
+                  A great clinic full of calmness
                 </p>
               </StaggerItem>
               <StaggerItem>
@@ -50,7 +50,7 @@ const SessionsPage = () => {
               </StaggerItem>
               <StaggerItem>
                 <p className="md:text-lg text-md font-thin md:pr-0 pr-4 text-neutral-700 leading-relaxed">
-                  Each session at Zen Reiki Studio is thoughtfully crafted to
+                  Each session at Zen Reiki Clinic is thoughtfully crafted to
                   guide you through a journey of relaxation, emotional release,
                   and energetic renewal. Whether you're new to energy work or
                   deepening your practice, our tranquil environment and

@@ -15,7 +15,7 @@ const AboutPage = () => {
           About Us
         </h1>
         <p className="text-neutral-500 md:text-4xl text-xl md:w-3/4 w-full tracking-wider leading-tight font-thin pt-6">
-          Brighton's Zen Reiki Studio Embracing the Four Elements for Holistic
+          Brighton's Zen Reiki Clinic Embracing the Four Elements for Holistic
           Healing Connection.
         </p>
       </div>
