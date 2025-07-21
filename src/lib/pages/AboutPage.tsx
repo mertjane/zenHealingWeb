@@ -9,7 +9,7 @@ const AboutPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="md:h-auto h-[410vh]">
+    <div className="md:h-auto h-[440vh]">
       <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
           About Us
@@ -33,7 +33,7 @@ const AboutPage = () => {
             className="object-cover h-[400px] w-[350px] absolute z-30 left-10 top-20"
             alt="Reiki Master"
           />
-          <div className="pt-[28em] p-10">
+          <div className="pt-[28em] p-0">
             <ParallaxScroll offset={100}>
               <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
                 <StaggerItem>
