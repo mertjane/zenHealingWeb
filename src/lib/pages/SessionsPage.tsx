@@ -29,7 +29,7 @@ const SessionsPage = () => {
           />
           <img
             src="/assets/images/studio4-edited.png"
-            className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[360px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[340px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
             alt="Reiki Studio"
           />
         </div>
