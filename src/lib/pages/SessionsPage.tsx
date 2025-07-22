@@ -3,6 +3,7 @@ import {
   StaggerAnimation,
   StaggerItem,
 } from "../components/ScrollFadeIn";
+import { ROUTES } from "../routes/routePaths";
 
 const SessionsPage = () => {
   return (
@@ -59,7 +60,8 @@ const SessionsPage = () => {
                 </p>
 
                 <a
-                  href="#"
+                  href={ROUTES.BOOK_NOW}
+                  target="_blank"
                   className="uppercase border-b border-[#5c6a55] text-[#5c6a55] tracking-widest font-thin py-2 px-8 relative top-10 hover:bg-[#5c6a55] hover:text-amber-50 duration-300"
                 >
                   Book Now

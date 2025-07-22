@@ -13,7 +13,7 @@ const Group = () => {
         <h1 className="md:text-7xl text-5xl text-amber-50">
           Your <em>Journey</em> to Transformation
         </h1>
-        <p className="md:text-3xl text-2xl md:px-0 px-4 text-amber-50 md:w-4/6 w-full font-light mx-auto mt-10">
+        <p className="md:text-3xl text-2xl md:px-0 px-4 text-amber-50 md:w-4/6 w-full font-thin mx-auto mt-10">
           At Zen Healing, we believe in more than just physical exercise. Our
           philosophy is rooted in personal growth, compassion, and discipline.
           We invite you to embrace the power of Reiki, not just as a practice
