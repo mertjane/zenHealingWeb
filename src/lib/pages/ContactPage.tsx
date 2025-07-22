@@ -20,7 +20,9 @@ const ContactPage = () => {
             <br />
             <br />
             <h2>
-              <em>Don't miss booking your free 15-minute consultation.</em>
+              <em>
+                "Don’t miss out — book your free 15-minute consultation today!"
+              </em>
             </h2>
           </p>
         </div>

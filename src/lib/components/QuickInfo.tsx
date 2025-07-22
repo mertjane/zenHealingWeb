@@ -3,7 +3,7 @@ import { ScrollAnimation } from "./ScrollFadeIn";
 
 const QuickInfo = () => {
   return (
-    <div className="md:h-[110vh] h-[90vh] bg-[#eee6da]">
+    <div className="md:h-[115vh] h-[95vh] bg-[#eee6da]">
       <img
         src="/assets/images/logoOriginal.png"
         alt="Zen Reiki"
@@ -32,7 +32,9 @@ const QuickInfo = () => {
             invite you to embark on a journey of self-discovery and renewal,
             where you can connect with the elements of nature in a luxurious and
             serene environment.{" "}
-            <em className="font-medium">Don't miss booking your free 15-minute consultation.</em>
+            <em className="font-medium">
+              "Don’t miss out — book your free 15-minute consultation today!”
+            </em>
           </p>
         </ScrollAnimation>
         <ScrollAnimation
