@@ -75,15 +75,14 @@ const AlbumSection = () => {
               <ParallaxScroll offset={100}>
                 <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
                   <StaggerItem>
-                    <h1 className="tracking-wider font-thin md:text-5xl text-3xl text-[#646362]">
+                    <h1 className="tracking-wider font-thin md:text-5xl text-3xl text-[#646362] mb-8">
                       "Don’t miss out — book your free 15-minute consultation
                       today!”
                     </h1>
                   </StaggerItem>
                   <StaggerItem>
-                    <p className="md:text-xl text-lg text-gray-600 leading-relaxed md:-mt-10 mt-4 font-thin md:w-3/4 w-full md:px-0 px-4 md:pb-0 pb-20">
-                      <br />
-                      <br />I offer distance Reiki Healing / Video Call sessions
+                    <p className="md:text-xl text-lg text-gray-600 leading-relaxed font-thin md:w-3/4 w-full md:px-0 px-4 ">
+                      I offer distance Reiki Healing / Video Call sessions
                       for those who would like help and support but prefer not
                       to have in-person sessions.
                     </p>
@@ -127,12 +126,12 @@ const AlbumSection = () => {
                     </p>
                   </StaggerItem>
                   <StaggerItem>
-                    <h1 className="tracking-wider mt-6 font-thin md:text-3xl text-5xl text-[#646362]">
+                    <h1 className="tracking-wider px-3 mt-2 font-thin md:text-3xl text-5xl text-[#646362]">
                       Benefits of Reiki
                     </h1>
-                    <p className="md:text-xl text-lg text-gray-600 leading-relaxed md:mt-6 mt-4 font-thin md:w-3/4 w-full md:px-0 px-4 md:pb-0 pb-20">
+                    <div className="md:text-xl text-lg text-gray-600 leading-relaxed md:mt-6 mt-4 font-thin md:w-3/4 w-full md:px-0 px-4 md:pb-0 pb-20">
                       People often turn to Reiki to:
-                      <ul className="list-disc">
+                      <ul className="list-disc text-start ml-8 mt-4">
                         <li>Reduce stress and anxiety</li>
                         <li>Sleep better and unwind</li>
                         <li>Support emotional and physical healing</li>
@@ -149,7 +148,7 @@ const AlbumSection = () => {
                           ability to heal itself.
                         </li>
                       </ul>
-                    </p>
+                    </div>
                   </StaggerItem>
                 </StaggerAnimation>
               </ParallaxScroll>
