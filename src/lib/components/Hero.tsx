@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="inset-0 bg-black/30 z-50 absolute top-0 left-0 w-full h-full"></div>
 
       {/* Content Section */}
-      <div className="w-full text-center absolute bottom-10 z-[1001] pb-14">
+      <div className="w-full text-center absolute md:bottom-10 bottom-1/6 z-[1001] pb-14">
         <span className="md:text-2xl text-xl tracking-widest uppercase font-light text-slate-300">
           brighton's reiki Clinic
         </span>

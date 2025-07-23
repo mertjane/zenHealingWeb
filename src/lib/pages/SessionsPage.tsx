@@ -7,7 +7,7 @@ import { ROUTES } from "../routes/routePaths";
 
 const SessionsPage = () => {
   return (
-    <div className="md:h-[325vh] h-[400vh]">
+    <div className="lg:h-[325vh] sm:h-[320vh] md:h-[300vh]">
       {/* Hero Section */}
       <div className="md:h-[500px] h-[400px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
@@ -40,12 +40,12 @@ const SessionsPage = () => {
           <ParallaxScroll offset={100}>
             <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
               <StaggerItem>
-                <p className="uppercase tracking-wider md:text-2xl text-xl font-thin text-[#5c6a55] mb-4">
+                <p className="uppercase tracking-wider lg:text-2xl md:text-xl text-lg font-thin text-[#5c6a55] mb-4">
                   A great clinic full of calmness
                 </p>
               </StaggerItem>
               <StaggerItem>
-                <h2 className="md:text-5xl text-4xl font-semibold text-[#5c6a55] mb-6 leading-normal">
+                <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold text-[#5c6a55] mb-6 leading-normal">
                   A Sacred Space for <em>Energy</em> Healing
                 </h2>
               </StaggerItem>
@@ -77,16 +77,16 @@ const SessionsPage = () => {
       {/* Content Section */}
       <div className="flex flex-col lg:flex-row md:px-28 py-28 bg-white gap-16">
         {/* Text Block */}
-        <div className="w-full md:order-1 order-2 lg:w-1/2 md:pt-10 pt-0 lg:pt-40 md:pl-0 pl-6">
+        <div className="w-full md:order-1 order-2 lg:w-1/2 md:pt-10 -mt-20 lg:pt-40 md:pl-0 pl-6">
           <ParallaxScroll offset={100}>
             <StaggerAnimation staggerDelay={0.3} childDelay={0.3}>
               <StaggerItem>
-                <p className="uppercase tracking-wider md:text-2xl text-xl font-thin text-[#5c6a55] mb-4">
+                <p className="uppercase tracking-wider lg:text-2xl md:text-xl text-lg font-thin text-[#5c6a55] mb-4">
                   Where healing meets harmony
                 </p>
               </StaggerItem>
               <StaggerItem>
-                <h2 className="md:text-5xl text-4xl font-semibold text-[#5c6a55] mb-6 leading-normal">
+                <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold text-[#5c6a55] mb-6 leading-normal">
                   Discover a Sanctuary for <em>Inner Peace</em>
                 </h2>
               </StaggerItem>
@@ -109,12 +109,12 @@ const SessionsPage = () => {
         <div className="relative flex md:order-2 order-1 w-full lg:w-1/2 md:min-h-[700px] min-h-[400px]">
           <img
             src="/assets/images/bg_layout.jpg"
-            className="object-cover md:h-[700px] md:w-[600px] h-[330px] w-[330px] absolute z-20 md:-left-10 md:top-12 left-4 top-4"
+            className="object-cover md:h-[700px] md:w-[600px] h-[300px] w-[300px] absolute z-20 md:-left-10 md:top-12 left-4 top-4"
             alt="Background Layout"
           />
           <img
             src="/assets/images/zenreception.jpg"
-            className="object-fit md:h-[700px] md:w-[650px] h-[330px] w-[330px] absolute z-30 md:left-0 md:top-24 left-8 top-8 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[650px] h-[300px] w-[300px] absolute z-30 md:left-0 md:top-24 left-8 top-8 shadow-lg"
             alt="Reiki Studio"
           />
         </div>

@@ -7,7 +7,7 @@ import { ROUTES } from "../routes/routePaths";
 const ContactPage = () => {
   return (
     <div className="min-h-screen md:h-[380vh]">
-      <div className="md:h-[900px] h-[1200px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10 flex md:flex-row flex-col">
+      <div className="lg:h-[900px] md:h-[1100px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10 flex md:flex-row flex-col">
         <div className="flex-1">
           <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
             Contact
@@ -19,17 +19,17 @@ const ContactPage = () => {
             look forward to hearing from you.
             <br />
             <br />
-            <h2>
-              <em>
-                "Don’t miss out — book your free 15-minute consultation today!"
-              </em>
-            </h2>
-            <p className="px-0 md:text-xl text-lg text-gray-600 leading-relaxed mt-4 font-thin">
-              I offer distance Reiki Healing / Video Call sessions for those who
-              would like help and support but prefer not to have in-person
-              sessions.
-            </p>
           </p>
+          <p className="px-0 md:text-xl text-lg text-gray-600 leading-relaxed mt-4 font-thin">
+            I offer distance Reiki Healing / Video Call sessions for those who
+            would like help and support but prefer not to have in-person
+            sessions.
+          </p>
+          <h2 className="px-0 md:text-xl text-lg text-gray-600 leading-relaxed mt-4 font-thin">
+            <em>
+              "Don’t miss out — book your free 15-minute consultation today!"
+            </em>
+          </h2>
         </div>
         <div className="flex-1 py-8 md:pl-28">
           <a

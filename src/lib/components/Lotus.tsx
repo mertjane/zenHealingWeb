@@ -1,6 +1,6 @@
 const Lotus = () => {
   return (
-    <div className="md:h-screen h-[200vh] relative flex items-center justify-center mb-20">
+    <div className="md:h-screen h-[110vh] relative flex items-center justify-center mb-20">
       <div className="inset-0 bg-black/40 z-50 absolute top-0 left-0 w-full h-full"></div>
       <img
         src="/assets/images/lotuswater.jpg"
@@ -9,7 +9,7 @@ const Lotus = () => {
       />
       {/* Content Section */}
 
-      <div className="absolute md:top-1/3 top-1/4 text-center z-50">
+      <div className="absolute md:top-1/3 top-1/8 text-center z-50">
         <h1 className="text-slate-200 md:text-8xl text-5xl tracking-wider">
           Embrace the 4 Principles
         </h1>
