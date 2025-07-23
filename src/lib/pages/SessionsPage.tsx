@@ -7,7 +7,7 @@ import { ROUTES } from "../routes/routePaths";
 
 const SessionsPage = () => {
   return (
-    <div className="min-h-screen md:h-[325vh] h-[275vh]">
+    <div className="md:h-[325vh] h-[400vh]">
       {/* Hero Section */}
       <div className="md:h-[500px] h-[400px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
@@ -25,12 +25,12 @@ const SessionsPage = () => {
         <div className="relative w-full lg:w-1/2 md:min-h-[700px] min-h-[400px]">
           <img
             src="/assets/images/bg_layout.jpg"
-            className="object-cover md:h-[700px] md:w-[600px] h-[400px] w-[330px] absolute z-20 md:left-12 md:top-12 left-9 top-9"
+            className="object-cover md:h-[700px] md:w-[600px] h-[400px] w-[320px] absolute z-20 md:left-12 md:top-12 left-4 top-8"
             alt="Background Layout"
           />
           <img
             src="/assets/images/studio4-edited.png"
-            className="object-fit md:h-[700px] md:w-[600px] h-[400px] w-[340px] absolute z-30 md:left-28 md:top-28 left-14 top-14 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[600px] h-[380px] w-[320px] absolute z-30 md:left-28 md:top-28 left-8 top-12 shadow-lg"
             alt="Reiki Clinic"
           />
         </div>
@@ -59,13 +59,15 @@ const SessionsPage = () => {
                   your needs.
                 </p>
 
-                <a
-                  href={ROUTES.BOOK_NOW}
-                  target="_blank"
-                  className="uppercase border-b border-[#5c6a55] text-[#5c6a55] tracking-widest font-thin py-2 px-8 relative top-10 hover:bg-[#5c6a55] hover:text-amber-50 duration-300"
-                >
-                  Book Now
-                </a>
+                <div className="flex items-center justify-center text-center">
+                  <a
+                    href={ROUTES.BOOK_NOW}
+                    target="_blank"
+                    className="uppercase border-b border-[#5c6a55] text-[#5c6a55] tracking-widest font-thin py-2 px-8 relative top-10 hover:bg-[#5c6a55] hover:text-amber-50 duration-300"
+                  >
+                    Book Now
+                  </a>
+                </div>
               </StaggerItem>
             </StaggerAnimation>
           </ParallaxScroll>
@@ -112,7 +114,7 @@ const SessionsPage = () => {
           />
           <img
             src="/assets/images/zenreception.jpg"
-            className="object-fit md:h-[700px] md:w-[650px] h-[330px] w-[360px] absolute z-30 md:left-0 md:top-24 left-10 top-10 shadow-lg"
+            className="object-fit md:h-[700px] md:w-[650px] h-[330px] w-[330px] absolute z-30 md:left-0 md:top-24 left-8 top-8 shadow-lg"
             alt="Reiki Studio"
           />
         </div>

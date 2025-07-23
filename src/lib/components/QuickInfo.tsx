@@ -3,14 +3,14 @@ import { ScrollAnimation } from "./ScrollFadeIn";
 
 const QuickInfo = () => {
   return (
-    <div className="md:h-[115vh] h-[95vh] bg-[#eee6da]">
+    <div className="md:h-[115vh] h-[150vh] bg-[#eee6da]">
       <img
         src="/assets/images/logoOriginal.png"
         alt="Zen Reiki"
         className="w-[300px] h-[200px] object-cover mx-auto"
       />
 
-      <div className="text-center">
+      <div className="text-center ">
         <ScrollAnimation
           variant="fadeUp"
           delay={0.2}
@@ -36,12 +36,6 @@ const QuickInfo = () => {
               "Don’t miss out — book your free 15-minute consultation today!”
             </em>
           </p>
-        </ScrollAnimation>
-        <ScrollAnimation
-          variant="fadeUp"
-          delay={0.6}
-          margin="0px 0px -20px 0px"
-        >
           <a
             href={ROUTES.BOOK_NOW}
             target="_blank"

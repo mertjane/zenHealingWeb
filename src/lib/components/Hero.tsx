@@ -3,7 +3,7 @@ import { ROUTES } from "../routes/routePaths";
 
 const Hero = () => {
   return (
-    <div className="md:h-screen h-[62vh] relative overflow-hidden">
+    <div className="md:h-screen h-screen relative overflow-hidden">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover object-center"
         src="/assets/videos/herovideo.mp4"

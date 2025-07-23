@@ -75,20 +75,7 @@ const AlbumSection = () => {
               <ParallaxScroll offset={100}>
                 <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
                   <StaggerItem>
-                    <h1 className="tracking-wider font-thin md:text-5xl text-3xl text-[#646362] mb-8">
-                      "Don’t miss out — book your free 15-minute consultation
-                      today!”
-                    </h1>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <p className="md:text-xl text-lg text-gray-600 leading-relaxed font-thin md:w-3/4 w-full md:px-0 px-4 ">
-                      I offer distance Reiki Healing / Video Call sessions
-                      for those who would like help and support but prefer not
-                      to have in-person sessions.
-                    </p>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <h1 className="tracking-wider mt-6 font-thin md:text-3xl text-5xl text-[#646362]">
+                    <h1 className="tracking-wider text-center mt-6 font-thin text-4xl text-[#646362]">
                       What is Reiki?
                     </h1>
                     <p className="md:text-xl text-lg text-gray-600 leading-relaxed md:mt-10 mt-4 font-thin md:w-3/4 w-full md:px-0 px-4 md:pb-0 pb-20">
@@ -168,19 +155,6 @@ const AlbumSection = () => {
             <div className="flex-1 ">
               <ParallaxScroll offset={100}>
                 <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
-                  <StaggerItem>
-                    <h1 className="p-20 tracking-wider font-thin md:text-5xl text-3xl text-[#646362]">
-                      "Don’t miss out — book your free 15-minute consultation
-                      today!"
-                    </h1>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <p className="px-20 md:text-xl text-lg text-gray-600 leading-relaxed -mt-10 font-thin">
-                      I offer distance Reiki Healing / Video Call sessions for
-                      those who would like help and support but prefer not to
-                      have in-person sessions.
-                    </p>
-                  </StaggerItem>
                   <StaggerItem>
                     <h1 className="px-20 tracking-wider mt-6 font-thin md:text-3xl text-5xl text-[#646362]">
                       What is Reiki?
