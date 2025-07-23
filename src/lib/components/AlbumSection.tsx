@@ -156,7 +156,7 @@ const AlbumSection = () => {
               <ParallaxScroll offset={100}>
                 <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
                   <StaggerItem>
-                    <h1 className="px-20 tracking-wider mt-6 font-thin md:text-3xl text-5xl text-[#646362]">
+                    <h1 className="px-20 tracking-wider mt-10 font-thin text-5xl text-[#646362]">
                       What is Reiki?
                     </h1>
                   </StaggerItem>
@@ -177,23 +177,16 @@ const AlbumSection = () => {
                       suitable for people of all ages.
                     </p>
                   </StaggerItem>
-                </StaggerAnimation>
-              </ParallaxScroll>
-            </div>
-          </div>
-          <div className="p-20 ">
-            <ParallaxScroll offset={100}>
-              <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
-                <StaggerItem>
-                  <p className="md:text-xl text-lg text-gray-600 leading-relaxed font-thin">
-                    Reiki is safe, non-invasive, and works beautifully alongside
-                    any other wellness or medical treatments you may have.
-                    Sessions can be done in person or at a distance, because
-                    energy is not limited by time or space.
-                  </p>
-                </StaggerItem>
-                <StaggerItem>
-                  <p className="md:text-xl text-lg text-gray-600 leading-relaxed mt-5 font-thin">
+                  <StaggerItem>
+                    <p className="px-20 md:text-xl text-lg text-gray-600 leading-relaxed mt-5 font-thin">
+                      Reiki is safe, non-invasive, and works beautifully
+                      alongside any other wellness or medical treatments you may
+                      have. Sessions can be done in person or at a distance,
+                      because energy is not limited by time or space.
+                    </p>
+                  </StaggerItem>
+                  <StaggerItem>
+                  <p className="px-20 md:text-xl text-lg text-gray-600 leading-relaxed mt-5 font-thin">
                     Reiki gently supports your body’s natural healing by
                     boosting energy, strengthening the immune system, and
                     helping you recover after surgery. Many people also find it
@@ -201,7 +194,7 @@ const AlbumSection = () => {
                   </p>
                 </StaggerItem>
                 <StaggerItem>
-                  <p className="md:text-xl text-lg text-gray-600 leading-relaxed mt-5 font-thin">
+                  <p className="px-20 md:text-xl text-lg text-gray-600 leading-relaxed mt-5 font-thin">
                     Reiki is a safe, complementary therapy that will not
                     interfere with any medical treatments — that’s why you’ll
                     find Reiki offered in many hospitals and hospices both here
@@ -210,6 +203,15 @@ const AlbumSection = () => {
                     information about Reiki at Cancer Research UK.
                   </p>
                 </StaggerItem>
+                </StaggerAnimation>
+              </ParallaxScroll>
+            </div>
+          </div>
+          <div className="p-20 ">
+            <ParallaxScroll offset={100}>
+              <StaggerAnimation staggerDelay={0.3} childDelay={0.5}>
+                
+                
                 <StaggerItem>
                   <h1 className="tracking-wider mt-6 font-thin text-6xl text-center text-[#646362]">
                     Benefits of Reiki
