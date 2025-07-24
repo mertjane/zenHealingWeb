@@ -10,7 +10,7 @@ const AboutPage = () => {
 
   return (
     <div className="md:h-auto md:text-3xl sm:h-[450vh]">
-      <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
+      <div className="md:h-[500px] h-[380px] bg-[#eee6da] md:pt-[7em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
           About Us
         </h1>
@@ -51,42 +51,42 @@ const AboutPage = () => {
                 <StaggerItem>
                   <p className="text-gray-600 tracking-wider text-xl font-thin">
                     My name is Ezgi , and I am a dedicated Reiki Master and
-                    healer. My journey into the world of energy healing began not
-                    with a sudden awakening, but with a quiet whisper a persistent
-                    inner calling to seek deeper understanding, connection, and
-                    healing. Healing is not just my profession it's my calling, my
-                    passion, and a legacy that runs deep within my bloodline.{" "}
+                    healer. My journey into the world of energy healing began
+                    not with a sudden awakening, but with a quiet whisper a
+                    persistent inner calling to seek deeper understanding,
+                    connection, and healing. Healing is not just my profession
+                    it's my calling, my passion, and a legacy that runs deep
+                    within my bloodline. <br />
                     <br />
-                    <br /> 
-                    I come from a lineage of healers. My great-grandmother
-                    was known in her community as a gifted healer. She worked with
+                    I come from a lineage of healers. My great-grandmother was
+                    known in her community as a gifted healer. She worked with
                     herbs, energy, intuition, and the natural world to bring
-                    balance and relief to those around her.Though I never met her,
-                    her wisdom, spirit, and strength have been passed down through
-                    generations, and I often feel her presence guiding me in my
-                    practice. This ancestral connection grounds my work in
-                    tradition, love, and a deep respect for those who came before
-                    me.
+                    balance and relief to those around her.Though I never met
+                    her, her wisdom, spirit, and strength have been passed down
+                    through generations, and I often feel her presence guiding
+                    me in my practice. This ancestral connection grounds my work
+                    in tradition, love, and a deep respect for those who came
+                    before me.
                     <br />
                     <br />
                     Though the path wasn't always clear, I felt a pull toward
                     healing from a young age deeply empathetic, sensitive to
-                    others' emotions, and drawn to the unseen energies that shape
-                    our lives. It wasn't until I faced my own health crisis and
-                    emotional challenges, when conventional methods offered
-                    limited relief, that I truly embraced the power of alternative
-                    healing and that's when Reiki found me."
+                    others' emotions, and drawn to the unseen energies that
+                    shape our lives. It wasn't until I faced my own health
+                    crisis and emotional challenges, when conventional methods
+                    offered limited relief, that I truly embraced the power of
+                    alternative healing and that's when Reiki found me."
                     <br />
                     <br />
                     I was introduced to Reiki through a trusted friend, and my
                     first session was life-changing bringing a profound sense of
                     peace, clarity, and emotional release unlike anything I had
-                    ever experienced. Inspired by that transformation, That moment
-                    ignited a fire in me and I knew this was my path. I began my
-                    Reiki training with Level I, Level II practitioner and
-                    eventually a Reiki Master., becoming attuned and certified
-                    through, what began as self-healing expanded into helping
-                    others heal too.
+                    ever experienced. Inspired by that transformation, That
+                    moment ignited a fire in me and I knew this was my path. I
+                    began my Reiki training with Level I, Level II practitioner
+                    and eventually a Reiki Master., becoming attuned and
+                    certified through, what began as self-healing expanded into
+                    helping others heal too.
                     <br />
                     <br />
                     My approach is grounded in compassion, presence, and the
@@ -96,17 +96,17 @@ const AboutPage = () => {
                     is intuitive and heart-centred. I hold sacred space for my
                     clients to feel safe, seen, and supported. Each session is
                     guided by the universal life force energy, my own spiritual
-                    guidance, and a deep trust in the body and spirit's ability to
-                    heal.
+                    guidance, and a deep trust in the body and spirit's ability
+                    to heal.
                     <br />
                     <br />
-                    Today, I am honoured to carry forward the healing legacy of my
-                    ancestors, blending ancient wisdom with modern practice.
-                    Whether you're seeking emotional clarity, physical relief, or
-                    spiritual realignment, I offer Reiki as a gentle yet powerful
-                    tool for transformation. Reiki is not just what I do — it is a
-                    way of life that continues to open my heart and expand my
-                    soul.
+                    Today, I am honoured to carry forward the healing legacy of
+                    my ancestors, blending ancient wisdom with modern practice.
+                    Whether you're seeking emotional clarity, physical relief,
+                    or spiritual realignment, I offer Reiki as a gentle yet
+                    powerful tool for transformation. Reiki is not just what I
+                    do — it is a way of life that continues to open my heart and
+                    expand my soul.
                     <br />
                     <br />
                     With gratitude and light.
@@ -151,11 +151,20 @@ const AboutPage = () => {
                   <StaggerItem>
                     <p className="text-gray-600 tracking-wider text-2xl font-thin leading-relaxed">
                       My name is Ezgi , and I am a dedicated Reiki Master and
-                      healer. My journey into the world of energy healing began not
-                      with a sudden awakening, but with a quiet whisper a persistent
-                      inner calling to seek deeper understanding, connection, and
-                      healing. Healing is not just my profession it's my calling, my
-                      passion, and a legacy that runs deep within my bloodline.
+                      healer. My journey into the world of energy healing began
+                      not with a sudden awakening, but with a quiet whisper a
+                      persistent inner calling to seek deeper understanding,
+                      connection, and healing. Healing is not just my profession
+                      it's my calling, my passion, and a legacy that runs deep
+                      within my bloodline.
+                    </p>
+                  </StaggerItem>
+                  <StaggerItem>
+                    <p className="text-gray-600 tracking-wider text-2xl font-thin leading-relaxed mt-4">
+                      I come from a lineage of healers. My great-grandmother was
+                      known in her community as a gifted healer. She worked with
+                      herbs, energy, intuition, and the natural world to bring
+                      balance and relief to those around her.
                     </p>
                   </StaggerItem>
                 </div>
@@ -165,15 +174,11 @@ const AboutPage = () => {
               <div className="mb-12">
                 <StaggerItem>
                   <p className="text-gray-600 tracking-wider text-2xl font-thin leading-relaxed">
-                    I come from a lineage of healers. My great-grandmother
-                    was known in her community as a gifted healer. She worked with
-                    herbs, energy, intuition, and the natural world to bring
-                    balance and relief to those around her.Though I never met her,
-                    her wisdom, spirit, and strength have been passed down through
-                    generations, and I often feel her presence guiding me in my
-                    practice. This ancestral connection grounds my work in
-                    tradition, love, and a deep respect for those who came before
-                    me.
+                    Though I never met her, her wisdom, spirit, and strength
+                    have been passed down through generations, and I often feel
+                    her presence guiding me in my practice. This ancestral
+                    connection grounds my work in tradition, love, and a deep
+                    respect for those who came before me.
                   </p>
                 </StaggerItem>
               </div>
@@ -183,11 +188,11 @@ const AboutPage = () => {
                   <p className="text-gray-600 tracking-wider text-2xl font-thin leading-relaxed">
                     Though the path wasn't always clear, I felt a pull toward
                     healing from a young age deeply empathetic, sensitive to
-                    others' emotions, and drawn to the unseen energies that shape
-                    our lives. It wasn't until I faced my own health crisis and
-                    emotional challenges, when conventional methods offered
-                    limited relief, that I truly embraced the power of alternative
-                    healing and that's when Reiki found me.
+                    others' emotions, and drawn to the unseen energies that
+                    shape our lives. It wasn't until I faced my own health
+                    crisis and emotional challenges, when conventional methods
+                    offered limited relief, that I truly embraced the power of
+                    alternative healing and that's when Reiki found me.
                   </p>
                 </StaggerItem>
               </div>
@@ -198,12 +203,12 @@ const AboutPage = () => {
                     I was introduced to Reiki through a trusted friend, and my
                     first session was life-changing bringing a profound sense of
                     peace, clarity, and emotional release unlike anything I had
-                    ever experienced. Inspired by that transformation, That moment
-                    ignited a fire in me and I knew this was my path. I began my
-                    Reiki training with Level I, Level II practitioner and
-                    eventually a Reiki Master., becoming attuned and certified
-                    through, what began as self-healing expanded into helping
-                    others heal too.
+                    ever experienced. Inspired by that transformation, That
+                    moment ignited a fire in me and I knew this was my path. I
+                    began my Reiki training with Level I, Level II practitioner
+                    and eventually a Reiki Master., becoming attuned and
+                    certified through, what began as self-healing expanded into
+                    helping others heal too.
                   </p>
                 </StaggerItem>
               </div>
@@ -218,8 +223,8 @@ const AboutPage = () => {
                     is intuitive and heart-centred. I hold sacred space for my
                     clients to feel safe, seen, and supported. Each session is
                     guided by the universal life force energy, my own spiritual
-                    guidance, and a deep trust in the body and spirit's ability to
-                    heal.
+                    guidance, and a deep trust in the body and spirit's ability
+                    to heal.
                   </p>
                 </StaggerItem>
               </div>
@@ -227,13 +232,13 @@ const AboutPage = () => {
               <div className="mb-12">
                 <StaggerItem>
                   <p className="text-gray-600 tracking-wider text-2xl font-thin leading-relaxed">
-                    Today, I am honoured to carry forward the healing legacy of my
-                    ancestors, blending ancient wisdom with modern practice.
-                    Whether you're seeking emotional clarity, physical relief, or
-                    spiritual realignment, I offer Reiki as a gentle yet powerful
-                    tool for transformation. Reiki is not just what I do — it is a
-                    way of life that continues to open my heart and expand my
-                    soul.
+                    Today, I am honoured to carry forward the healing legacy of
+                    my ancestors, blending ancient wisdom with modern practice.
+                    Whether you're seeking emotional clarity, physical relief,
+                    or spiritual realignment, I offer Reiki as a gentle yet
+                    powerful tool for transformation. Reiki is not just what I
+                    do — it is a way of life that continues to open my heart and
+                    expand my soul.
                   </p>
                 </StaggerItem>
               </div>
