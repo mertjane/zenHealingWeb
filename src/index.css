@@ -107,6 +107,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Solution 1: Force consistent box-sizing and width */
+input, select {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 a,
 button,
 img,

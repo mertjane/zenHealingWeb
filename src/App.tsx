@@ -7,6 +7,8 @@ import AboutPage from "./lib/pages/AboutPage";
 import ContactPage from "./lib/pages/ContactPage";
 import SessionsPage from "./lib/pages/SessionsPage";
 import BookingPage from "./lib/pages/BookingPage";
+import CancelPaymentPage from "./lib/pages/CancelPaymentPage";
+import SuccessPaymentPage from "./lib/pages/SuccessPaymentPage";
 
 function App() {
   return (
@@ -53,12 +55,32 @@ function App() {
             }
           />
 
-          {/* Contact Page */}
+          {/* Booking Page */}
           <Route
             path={ROUTES.BOOKING}
             element={
               <Layout showHeader={true} showFooter={true}>
                 <BookingPage />
+              </Layout>
+            }
+          />
+
+          {/* Cancel Payment Page */}
+          <Route
+            path={ROUTES.CANCEL_PAY}
+            element={
+              <Layout showHeader={true} showFooter={true}>
+                <CancelPaymentPage />
+              </Layout>
+            }
+          />
+
+          {/* Success Payment Page */}
+          <Route
+            path={ROUTES.SUCCESS_PAY}
+            element={
+              <Layout showHeader={true} showFooter={true}>
+                <SuccessPaymentPage />
               </Layout>
             }
           />
