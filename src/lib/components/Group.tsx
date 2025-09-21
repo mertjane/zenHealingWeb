@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ROUTES } from "../routes/routePaths";
 
 const Group = () => {
@@ -20,13 +21,12 @@ const Group = () => {
           but as a way of life. Through our guidance, you'll discover inner
           strength, peace, and gratitude that extend far beyond the energy.
         </p>
-        <a
-          href={ROUTES.BOOK_NOW}
-          target="_blank"
+        <Link
+          to={ROUTES.BOOKING}
           className="uppercase border-b border-white text-white tracking-widest font-thin py-3 px-8 relative top-10 hover:bg-[#717d67] hover:text-amber-50 hover:border-[#717d67] duration-300"
         >
           book now
-        </a>
+        </Link>
       </div>
     </div>
   );

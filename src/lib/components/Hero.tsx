@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import { ROUTES } from "../routes/routePaths";
 
 const Hero = () => {
@@ -23,13 +24,12 @@ const Hero = () => {
           Where Tranquillity <br />
           <em>Meets</em> Transformation
         </h1>
-        <a
-          href={ROUTES.BOOK_NOW}
-          target="_blank"
+        <Link
+          to={ROUTES.BOOKING}
           className="cursor-pointer px-12 uppercase text-md tracking-wider border duration-300 py-4 border-white text-white hover:bg-white hover:text-black "
         >
           Book now
-        </a>
+        </Link>
       </div>
     </div>
   );

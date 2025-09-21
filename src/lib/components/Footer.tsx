@@ -26,12 +26,27 @@ const Footer = () => {
             info@zenhealing.co.uk
           </a>
           <p className="text-neutral-300 tracking-wide">07414 882121</p>
+          <a
+            href={ROUTES.BOOK_NOW}
+            target="_blank"
+            className="cursor-pointer text-neutral-300 tracking-wide text-xs duration-300 py-4"
+          >
+            Book a session via <i className="underline">Fresha</i>
+          </a>
         </div>
         <div className="flex-1 flex flex-col pt-20 font-thin text-start ml-10 h-max">
-          <a href={ROUTES.INSTAGRAM} target="_blank" className="text-neutral-300 tracking-wide">
+          <a
+            href={ROUTES.INSTAGRAM}
+            target="_blank"
+            className="text-neutral-300 tracking-wide"
+          >
             Instagram
           </a>
-          <a href={ROUTES.FACEBOOK} target="_blank" className="text-neutral-300 tracking-wide">
+          <a
+            href={ROUTES.FACEBOOK}
+            target="_blank"
+            className="text-neutral-300 tracking-wide"
+          >
             Facebook
           </a>
         </div>
