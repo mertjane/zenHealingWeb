@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   ParallaxScroll,
   StaggerAnimation,
@@ -60,13 +61,12 @@ const SessionsPage = () => {
                 </p>
 
                 <div className="flex items-center justify-center text-center">
-                  <a
-                    href={ROUTES.BOOK_NOW}
-                    target="_blank"
+                  <Link
+                    to={ROUTES.BOOKING}
                     className="uppercase border-b border-[#5c6a55] text-[#5c6a55] tracking-widest font-thin py-2 px-8 relative top-10 hover:bg-[#5c6a55] hover:text-amber-50 duration-300"
                   >
                     Book Now
-                  </a>
+                  </Link>
                 </div>
               </StaggerItem>
             </StaggerAnimation>
