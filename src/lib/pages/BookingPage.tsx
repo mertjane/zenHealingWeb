@@ -1,9 +1,27 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import emailjs from "emailjs-com";
 import { loadStripe } from "@stripe/stripe-js";
 import toast from "react-hot-toast";
+import { generateTimeSlots } from "../utils/generateSlots";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+
+const sessionDurations: Record<string, number> = {
+  "15-min": 15,
+  "30-min": 30,
+  "45-min": 45,
+  "60-min": 60,
+};
+
+interface Booking {
+  name: string;
+  surname: string;
+  email: string;
+  number?: string;
+  date: string;
+  time: string;
+  session: string;
+}
 
 const BookingPage = () => {
   const initialFormData = {
@@ -16,8 +34,30 @@ const BookingPage = () => {
     session: "",
   };
 
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState<Booking>(initialFormData);
   const [loading, setLoading] = useState(false);
+  const [bookedTimes, setBookedTimes] = useState<string[]>([]);
+
+  // fetch existing bookings when date changes
+  useEffect(() => {
+    if (!formData.date) return;
+
+    const fetchBookings = async () => {
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/bookings?date=${formData.date}`
+        );
+        if (!res.ok) throw new Error("Failed to fetch bookings");
+        const data: Booking[] = await res.json();
+        setBookedTimes(data.map((b) => b.time)); // store only booked times
+      } catch (err) {
+        console.error("Error fetching bookings:", err);
+        toast.error("Could not load booked times");
+      }
+    };
+
+    fetchBookings();
+  }, [formData.date]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -28,10 +68,29 @@ const BookingPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setLoading(true);
 
     try {
+      // Check overlap before submission
+      if (bookedTimes.includes(formData.time)) {
+        toast.error(
+          "That time slot has just been booked. Please pick another."
+        );
+        setLoading(false);
+        return;
+      }
+
+      // Save booking in backend
+      const saveRes = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/bookings`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!saveRes.ok) throw new Error("Failed to save booking");
       // Wait 3 seconds before sending request (spinner)
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
@@ -81,7 +140,7 @@ Zen Healing Team`,
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         );
 
-        toast.success("You booking successfully proceed! ✅");
+        toast.success("Your booking was successful ✅");
         setLoading(false);
         setFormData(initialFormData);
         return; // no payment required
@@ -113,10 +172,18 @@ Zen Healing Team`,
     }
   };
 
+  const selectedDuration = sessionDurations[formData.session] || 15;
+  const slots = useMemo(() => {
+    return generateTimeSlots(9, 19, 15, selectedDuration).map((slot) => ({
+      ...slot,
+      disabled: bookedTimes.includes(slot.value), // mark as unavailable
+    }));
+  }, [selectedDuration, bookedTimes]);
+
   return (
     <div className="lg:h-[220vh] sm:h-[320vh] md:h-[300vh] bg-gray-50">
       {/* Hero Section */}
-      <div className="md:h-[500px] h-[400px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
+      <div className="md:h-[500px] h-[550px] bg-[#eee6da] md:pt-[14em] pt-[10em] md:px-28 px-10">
         <h1 className="md:text-7xl text-6xl tracking-wider text-[#5c6a55]">
           Book Your Session Now
         </h1>
@@ -127,7 +194,7 @@ Zen Healing Team`,
       </div>
 
       {/* Booking Form */}
-      <div className="flex justify-center items-center py-40 px-6">
+      <div className="flex justify-center items-center py-12 px-6">
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-lg rounded-2xl p-10 w-full max-w-2xl space-y-8"
@@ -217,14 +284,24 @@ Zen Healing Team`,
               <label className="block text-gray-700 font-medium mb-2">
                 Time
               </label>
-              <input
-                type="time"
+              <select
                 name="time"
                 value={formData.time}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5c6a55]"
                 required
-              />
+              >
+                <option value="">Select a time</option>
+                {slots.map((slot) => (
+                  <option
+                    key={slot.value}
+                    value={slot.value}
+                    disabled={slot.disabled}
+                  >
+                    {slot.label} {slot.disabled ? "(Not available)" : ""}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 
