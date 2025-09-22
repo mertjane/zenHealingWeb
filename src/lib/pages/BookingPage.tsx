@@ -79,7 +79,7 @@ const BookingPage = () => {
         return;
       }
 
-      // Save booking in backend
+      // Always save booking to backend
       const saveRes = await fetch(
         `${import.meta.env.VITE_API_URL}/api/bookings`,
         {
@@ -89,22 +89,25 @@ const BookingPage = () => {
         }
       );
 
-      if (!saveRes.ok) throw new Error("Failed to save booking");
-      // Wait 3 seconds before sending request (spinner)
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      const savedData = await saveRes.json();
 
-      // If free 15-min session, backend handles email, so just show success
-      if (formData.session === "15-min") {
-        toast.success(
-          "Your booking was successful ✅ Confirmation sent via email."
-        );
-        setFormData(initialFormData);
-        setLoading(false);
-        return;
+      if (!saveRes.ok) {
+        throw new Error(savedData.error || "Failed to save booking");
       }
 
-      // For paid sessions, call Stripe checkout
-      const stripeSessionRes = await fetch(
+      // Wait 1-2s for UX
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // For free 15-min session: backend already sends emails
+      if (formData.session === "15-min") {
+        toast.success("Your booking was successful ✅ Confirmation email sent");
+        setFormData(initialFormData);
+        setLoading(false);
+        return; // No payment required
+      }
+
+      // For paid sessions, create Stripe checkout
+      const stripeRes = await fetch(
         `${import.meta.env.VITE_API_URL}/api/stripe/create-checkout-session`,
         {
           method: "POST",
@@ -113,7 +116,7 @@ const BookingPage = () => {
         }
       );
 
-      const stripeData = await stripeSessionRes.json();
+      const stripeData = await stripeRes.json();
 
       if (stripeData?.id) {
         const stripe = await stripePromise;
@@ -122,9 +125,9 @@ const BookingPage = () => {
         toast.error("Error starting payment");
         setLoading(false);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      toast.error("Something went wrong. Please try again.");
+      toast.error(err.message || "Something went wrong. Please try again.");
       setLoading(false);
     }
   };
