@@ -27,14 +27,13 @@ const MobileMenu = ({ isOpen, toggleMenu }: Props) => {
           <Link onClick={toggleMenu} to={ROUTES.CONTACT}>
             Contact
           </Link>
-          <a
+          <Link
             onClick={toggleMenu}
-            href={ROUTES.BOOK_NOW}
-            target="_blank"
+            to={ROUTES.BOOKING}
             className="mt-10 cursor-pointer px-8 uppercase text-md tracking-wider border duration-300 py-2 border-[#5c6a55] text-[#5c6a55] hover:bg-[#5c6a55] hover:text-white text-sm"
           >
             Book now
-          </a>
+          </Link>
         </nav>
       </div>
     </div>

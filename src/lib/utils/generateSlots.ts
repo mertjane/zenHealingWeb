@@ -3,7 +3,7 @@ export function generateTimeSlots(
   startHour: number,
   endHour: number,
   interval: number = 15,
-  sessionDuration: number = 15
+  _sessionDuration: number = 15
 ) {
   const slots: { value: string; label: string }[] = [];
   const start = new Date();
