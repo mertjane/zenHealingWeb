@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ROUTES } from "../routes/routePaths";
 
 const Footer = () => {
@@ -53,9 +54,8 @@ const Footer = () => {
       </div>
       <div className="flex items-center justify-between">
         <small className="text-neutral-300 tracking-wide">
-          <a href="#">Terms & Conditions | </a>
-          <a href="#">Privacy Policy | </a>
-          <a href="#">Clinic Policy</a>
+          <Link to={ROUTES.TERMS}>Terms & Conditions | </Link>
+          <Link to={ROUTES.CANCEL_POLICY}>Cancellation Policy</Link>
         </small>
         <small className="text-neutral-300 tracking-wide">
           © 2024 by Zen Healing Reiki. Website by DiploDev

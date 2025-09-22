@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import emailjs from "emailjs-com";
 import { loadStripe } from "@stripe/stripe-js";
 import toast from "react-hot-toast";
 import { generateTimeSlots } from "../utils/generateSlots";
@@ -94,60 +93,18 @@ const BookingPage = () => {
       // Wait 3 seconds before sending request (spinner)
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
-      // Send to Admin
+      // If free 15-min session, backend handles email, so just show success
       if (formData.session === "15-min") {
-        await emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          {
-            from_name: formData.name + " " + formData.surname,
-            from_email: formData.email,
-            phone: formData.number,
-            to_email: "info@zenhealing.co.uk",
-            message: `New booking received:
-              Name: ${formData.name} ${formData.surname}
-              Email: ${formData.email}
-              Phone: ${formData.number}
-              Date: ${formData.date}
-              Time: ${formData.time}
-              Session: ${formData.session}`,
-          },
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        toast.success(
+          "Your booking was successful ✅ Confirmation sent via email."
         );
-
-        // Send confirmation to User
-        await emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          {
-            from_name: "Zen Healing", // or your business name
-            from_email: "info@zenhealing.co.uk",
-            phone: "N/A",
-            to_email: formData.email, // ✅ User’s email
-            message: `Hi ${formData.name},
-
-Thank you for booking a free 15-min consultation! 🎉  
-
-Here are your booking details:
-- Date: ${formData.date}
-- Time: ${formData.time}
-- Session: 15-min free consultation
-
-We look forward to connecting with you!  
-
-Zen Healing Team`,
-          },
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        );
-
-        toast.success("Your booking was successful ✅");
-        setLoading(false);
         setFormData(initialFormData);
-        return; // no payment required
+        setLoading(false);
+        return;
       }
 
       // For paid sessions, call Stripe checkout
-      const res = await fetch(
+      const stripeSessionRes = await fetch(
         `${import.meta.env.VITE_API_URL}/api/stripe/create-checkout-session`,
         {
           method: "POST",
@@ -156,11 +113,11 @@ Zen Healing Team`,
         }
       );
 
-      const data = await res.json();
+      const stripeData = await stripeSessionRes.json();
 
-      if (data?.id) {
+      if (stripeData?.id) {
         const stripe = await stripePromise;
-        await stripe?.redirectToCheckout({ sessionId: data.id });
+        await stripe?.redirectToCheckout({ sessionId: stripeData.id });
       } else {
         toast.error("Error starting payment");
         setLoading(false);

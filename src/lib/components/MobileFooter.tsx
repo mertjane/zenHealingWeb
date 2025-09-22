@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ROUTES } from "../routes/routePaths";
 
 const MobileFooter = () => {
@@ -48,9 +49,8 @@ const MobileFooter = () => {
           </li>
           <div className="flex flex-col text-center mt-10">
             <small className="text-amber-50 tracking-widest font-thin">
-              <a href="#">Terms & Conditions | </a>
-              <a href="#">Privacy Policy | </a>
-              <a href="#">Clinic Policy</a>
+              <Link to={ROUTES.TERMS}>Terms & Conditions | </Link>
+              <Link to={ROUTES.CANCEL_POLICY}>Cancellation Policy</Link>
             </small>
             <small className="text-amber-50 font-thin tracking-widest mt-8 w-3/4 mx-auto">
               © 2024 by Zen Healing Reiki. Website by DiploDev

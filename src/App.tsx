@@ -9,6 +9,9 @@ import SessionsPage from "./lib/pages/SessionsPage";
 import BookingPage from "./lib/pages/BookingPage";
 import CancelPaymentPage from "./lib/pages/CancelPaymentPage";
 import SuccessPaymentPage from "./lib/pages/SuccessPaymentPage";
+import CancelPolicyPage from "./lib/pages/CancelPolicyPage";
+import TermsConditionsPage from "./lib/pages/TermsConditionsPage";
+import CancellationRedirect from "./lib/pages/CancellationRedirect";
 
 function App() {
   return (
@@ -81,6 +84,36 @@ function App() {
             element={
               <Layout showHeader={true} showFooter={true}>
                 <SuccessPaymentPage />
+              </Layout>
+            }
+          />
+
+          {/* Cancellation Policy Page */}
+          <Route
+            path={ROUTES.CANCEL_POLICY}
+            element={
+              <Layout showHeader={true} showFooter={true}>
+                <CancelPolicyPage />
+              </Layout>
+            }
+          />
+
+          {/* Terms & Conditions Page */}
+          <Route
+            path={ROUTES.TERMS}
+            element={
+              <Layout showHeader={true} showFooter={true}>
+                <TermsConditionsPage />
+              </Layout>
+            }
+          />
+
+          {/* Booking Cancel Page */}
+          <Route
+            path={ROUTES.CANCEL_BOOK}
+            element={
+              <Layout showHeader={true} showFooter={true}>
+                <CancellationRedirect />
               </Layout>
             }
           />
