@@ -16,7 +16,7 @@ interface Booking {
   name: string;
   surname: string;
   email: string;
-  number?: string;
+  phone?: string;
   date: string;
   time: string;
   session: string;
@@ -35,9 +35,13 @@ const BookingPage = () => {
 
   const [formData, setFormData] = useState<Booking>(initialFormData);
   const [loading, setLoading] = useState(false);
-  const [bookedTimes, setBookedTimes] = useState<string[]>([]);
+  const [bookedTimes, _setBookedTimes] = useState<string[]>([]);
+  const [bookedSessions, setBookedSessions] = useState<
+    { time: string; duration: number }[]
+  >([]);
 
   // fetch existing bookings when date changes
+  // Update the useEffect
   useEffect(() => {
     if (!formData.date) return;
 
@@ -48,7 +52,14 @@ const BookingPage = () => {
         );
         if (!res.ok) throw new Error("Failed to fetch bookings");
         const data: Booking[] = await res.json();
-        setBookedTimes(data.map((b) => b.time)); // store only booked times
+
+        // Map bookings to include time and duration
+        const bookedSessionsData = data.map((booking) => ({
+          time: booking.time,
+          duration: sessionDurations[booking.session] || 15,
+        }));
+
+        setBookedSessions(bookedSessionsData);
       } catch (err) {
         console.error("Error fetching bookings:", err);
         toast.error("Could not load booked times");
@@ -133,12 +144,16 @@ const BookingPage = () => {
   };
 
   const selectedDuration = sessionDurations[formData.session] || 15;
+
   const slots = useMemo(() => {
-    return generateTimeSlots(9, 19, 15, selectedDuration).map((slot) => ({
-      ...slot,
-      disabled: bookedTimes.includes(slot.value), // mark as unavailable
-    }));
-  }, [selectedDuration, bookedTimes]);
+    return generateTimeSlots(
+      9,
+      19,
+      15,
+      selectedDuration,
+      bookedSessions // pass booked sessions with durations
+    );
+  }, [selectedDuration, bookedSessions]);
 
   return (
     <div className="lg:h-[220vh] sm:h-[320vh] md:h-[300vh] bg-gray-50">
@@ -217,8 +232,8 @@ const BookingPage = () => {
               </label>
               <input
                 type="text"
-                name="number"
-                value={formData.number}
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5c6a55]"
                 placeholder="Enter your phone number"
