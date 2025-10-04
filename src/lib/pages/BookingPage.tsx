@@ -27,7 +27,7 @@ const BookingPage = () => {
     name: "",
     surname: "",
     email: "",
-    number: "",
+    phone: "",
     date: "",
     time: "",
     session: "",
@@ -86,11 +86,10 @@ const BookingPage = () => {
         toast.error(
           "That time slot has just been booked. Please pick another."
         );
-        setLoading(false);
         return;
       }
 
-      // Always save booking to backend
+      // Save booking to backend
       const saveRes = await fetch(
         `${import.meta.env.VITE_API_URL}/api/bookings`,
         {
@@ -106,39 +105,56 @@ const BookingPage = () => {
         throw new Error(savedData.error || "Failed to save booking");
       }
 
-      // Wait 1-2s for UX
+      // Optional UX delay
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // For free 15-min session: backend already sends emails
+      // Free 15-min session
       if (formData.session === "15-min") {
         toast.success("Your booking was successful ✅ Confirmation email sent");
         setFormData(initialFormData);
-        setLoading(false);
-        return; // No payment required
+        return;
       }
 
-      // For paid sessions, create Stripe checkout
+      // Paid session: create Stripe checkout
+      const stripeData = {
+        name: formData.name,
+        surname: formData.surname,
+        email: formData.email,
+        number: formData.phone, // Map phone to number for Stripe
+        date: formData.date,
+        time: formData.time,
+        session: formData.session,
+      };
+
       const stripeRes = await fetch(
         `${import.meta.env.VITE_API_URL}/api/stripe/create-checkout-session`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(stripeData),
         }
       );
 
-      const stripeData = await stripeRes.json();
+      const stripeResponse = await stripeRes.json();
 
-      if (stripeData?.id) {
-        const stripe = await stripePromise;
-        await stripe?.redirectToCheckout({ sessionId: stripeData.id });
-      } else {
-        toast.error("Error starting payment");
-        setLoading(false);
+      if (!stripeRes.ok) {
+        throw new Error(stripeResponse?.error || "Failed to create payment session");
+      }
+
+      if (!stripeResponse?.id) {
+        throw new Error("Invalid payment session response");
+      }
+
+      const stripe = await stripePromise;
+      const result = await stripe?.redirectToCheckout({ sessionId: stripeResponse.id });
+      
+      if (result?.error) {
+        throw new Error(result.error.message || "Payment redirect failed");
       }
     } catch (err: any) {
       console.error(err);
       toast.error(err.message || "Something went wrong. Please try again.");
+    } finally {
       setLoading(false);
     }
   };
@@ -146,13 +162,7 @@ const BookingPage = () => {
   const selectedDuration = sessionDurations[formData.session] || 15;
 
   const slots = useMemo(() => {
-    return generateTimeSlots(
-      9,
-      19,
-      15,
-      selectedDuration,
-      bookedSessions // pass booked sessions with durations
-    );
+    return generateTimeSlots(9, 19, 15, selectedDuration, bookedSessions);
   }, [selectedDuration, bookedSessions]);
 
   return (
@@ -333,3 +343,5 @@ const BookingPage = () => {
 };
 
 export default BookingPage;
+
+
